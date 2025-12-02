@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VSM | Login</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="maincontainer">
+    <h1>Register / Login</h1>
+
+    <div class="custom-checkbox">
+      <input id = "status" type ="checkbox" name="status" aria-label="Role toggle (Admin / Worker)">
+      <label for = "status">
+        <div class="status-switch" data-unchecked="Admin" data-checked="Worker">
+          <span class="knob" aria-hidden="true"></span>
+        </div>
+      </label>
+    </div>
+
+    <div class="userinputs">
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <input type="text" id="name" placeholder="First name" style="display:none" />
+      <input type="text" id="lastname" placeholder="Last name" style="display:none" />
+      <input type="tel" id="phone" placeholder="Phone (+1...)" style="display:none" />
+    </div>
+
+    <div class="buttomcontainers">
+      <button class="btn" id="btnSignup">Register</button>
+      <button class="btn" id="btnLogin">Login</button>
+    </div>
+    <p id="msg" role = "alert" aria-polite="polite"></p>
+  </div>
+
+  <script type="module" src="app-auth.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VSM | Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegación">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">V</div>
+        <div class="brand-text">
+          <strong>VSM</strong>
+          <span>Admin</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link active" href="#workers" aria-current="page">
+          <span class="icon" aria-hidden="true">🛠️</span> Workers
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="btn-secondary w-full" id="btnSignOut" type="button" title="Sign out">
+          Sign out
+        </button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1 class="title">Vital Signs Monitoring</h1>
+
+        <form class="search" role="search" aria-label="Search workers">
+          <input id="searchInput" type="search" placeholder="Search by name, email, or phone number…" />
+          <button class="btn" id="btnSearch" type="button" aria-label="Search">Search</button>
+        </form>
+
+        <div class="whoami">
+          <strong id="adminName">Admin</strong>
+          <small id="adminEmail">admin@email.com</small>
+        </div>
+      </header>
+
+      <main class="content">
+        <section id="workers" class="panel" aria-label="Workers and vital signs">
+          <div class="panel-head">
+            <h2>Workers</h2>
+            <p id="workersHint">Basic view of data and vital signs.</p>
+          </div>
+
+          <div class="table-wrap" role="region" aria-labelledby="workers">
+            <table class="table" aria-describedby="workersHint">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Cellphone</th>
+                  <th scope="col">Motion</th>
+                  <th scope="col">SpO₂ (%)</th>
+                  <th scope="col">HR (bpm)</th>
+                  <th scope="col">Temp (°C)</th>
+                  <th scope="col">Updated</th>
+                </tr>
+              </thead>
+              <tbody id="workersBody">
+                <tr class="placeholder">
+                  <td colspan="8">No data. (Connect your query to Firestore to list it here)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="app-admin.js" defer></script>
+</body>
+</html>
+

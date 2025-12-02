@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vital Signal Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="topbar">
+    <h1 class="maintitle">Vital Signal Dashboard</h1>
+  </div>
+  <h2>Hi, <span id="userName">--</span> </h2>
+  <div class="grid">
+    <div class="card">Acc (g): <span id="acc">--</span></div>
+    <div class="card">Gyr (dps): <span id="gyr">--</span></div>
+    <div class="card">Temp °C <span id="tempC">--</span></div>
+    <div class="card">Temp °F <span id="tempF">--</span></div>
+    <div class="card">SpO₂ %: <span id="spo2">--</span></div>
+    <div class="card">HR bpm: <span id="hr">--</span></div>
+  </div>
+  <div class="Graphs">
+    <h2>ECG (Raw)</h2>
+    
+    <canvas id="ecgChart"></canvas>
+  </div>
+  <div class="buttomcontainers">
+    <button class="btn" id="btnLogout">Log out</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('firebase-messaging-sw.js');
+  }
+</script>
+  <script type="module" src ="dashboard.js" defer></script>
+</body>
+</html>
