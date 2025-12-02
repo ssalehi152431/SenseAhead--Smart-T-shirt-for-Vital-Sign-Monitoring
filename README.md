@@ -3,9 +3,9 @@
 
 This repository contains all design, firmware, hardware, and web application files required to run the VSM‑3 wearable system, which collects **ECG, SpO2, IMU, and temperature data** and displays them on a local web dashboard.
 
-## System Diagram
+<img width="1482" height="800" alt="our approach" src="https://github.com/user-attachments/assets/e3757823-a241-403a-bbef-409fc5cf2727" />
 
-![System diagram](images/ourapproach.jpg)
+
 
 
 ---
