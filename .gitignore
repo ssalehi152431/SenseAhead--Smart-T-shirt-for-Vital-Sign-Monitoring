@@ -1,0 +1,22 @@
+# Ignore firebase and secrets
+webpage/export/firebase_key.json
+*.key.json
+*.secret.json
+*.env
+
+# Node modules
+node_modules/
+webpage/node_modules/
+
+# Firebase function environment
+webpage/functions/.env
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Build folders
+dist/
+build/
